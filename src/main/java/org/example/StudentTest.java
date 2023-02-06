@@ -18,7 +18,7 @@ public class StudentTest
         log.info("Enter the number of Students:");
         n=mysc.nextInt();
         Student s[]=new Student[n];
-        List<Student> StudList=new ArrayList<Student>();
+        List<Student> studList=new ArrayList<Student>();
         for(int i=0;i<n;i++)
         {
             log.info("Enter the Student's name:");
@@ -31,7 +31,7 @@ public class StudentTest
             s[i].setName(name);
             s[i].setAge(age);
             s[i].setGPA(gpa);
-            StudList.add(s[i]);
+            studList.add(s[i]);
         }
         for(int i=0;i<n;i++)
         {
@@ -39,7 +39,7 @@ public class StudentTest
             log.info("Student age:"+s[i].getAge()+"\n");
             log.info("Student gpa:"+s[i].getGPA()+"\n");
         }
-        Collections.sort(StudList,new Comparator<Student>() {
+        Collections.sort(studList,new Comparator<Student>() {
             public int compare(Student s1,Student s2)
             {
                 double res= s2.getGPA()-s1.getGPA();
@@ -47,18 +47,12 @@ public class StudentTest
             }
         });
         log.info("After Update\n");
-//         for(int i=0;i<n;i++)
-//         {
-//            log.info("Student name:"+s[i].getName()+"\n");
-//            log.info("Student age:"+s[i].getAge()+"\n");
-//            log.info("Student gpa:"+s[i].getGPA()+"\n");
-//         }
         log.info("Array List\n");
         for(int i=0;i<n;i++)
         {
-            log.info("Student name:"+StudList.get(i).getName()+"\n");
-            log.info("Student age:"+StudList.get(i).getAge()+"\n");
-            log.info("Student gpa:"+StudList.get(i).getGPA()+"\n");
+            log.info("Student name:"+studList.get(i).getName()+"\n");
+            log.info("Student age:"+studList.get(i).getAge()+"\n");
+            log.info("Student gpa:"+studList.get(i).getGPA()+"\n");
 
         }
         mysc.close();
