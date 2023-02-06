@@ -17,7 +17,7 @@ public class StudentTest
         Scanner mysc=new Scanner(System.in);
         log.info("Enter the number of Students:");
         n=mysc.nextInt();
-        Student s[]=new Student[n];
+        Student[] s=new Student[n];
         List<Student> studList=new ArrayList<Student>();
         for(int i=0;i<n;i++)
         {
