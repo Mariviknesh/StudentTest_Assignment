@@ -18,7 +18,7 @@ public class StudentTest
         log.info("Enter the number of Students:");
         n=mysc.nextInt();
         Student[] s=new Student[n];
-        List<Student> studList=new ArrayList<Student>();
+        List<Student> studList=new ArrayList<>();
         for(int i=0;i<n;i++)
         {
             log.info("Enter the Student's name:");
@@ -39,7 +39,7 @@ public class StudentTest
             log.info("Student age:"+s[i].getAge()+"\n");
             log.info("Student gpa:"+s[i].getGPA()+"\n");
         }
-        Collections.sort(studList,new Comparator<Student>() {
+        Collections.sort(studList,new Comparator<>() {
             public int compare(Student s1,Student s2)
             {
                 double res= s2.getGPA()-s1.getGPA();
@@ -60,42 +60,3 @@ public class StudentTest
 }
 
 
-class Student{
-    String name;
-    int age;
-    double gpa;
-    Student()
-    {
-        this.name="";
-        this.age=0;
-        this.gpa=0;
-    }
-    public void updateGpa(double upga)
-    {
-        this.gpa=upga;
-    }
-    public void setName(String name)
-    {
-        this.name=name;
-    }
-    public void setAge(int age)
-    {
-        this.age=age;
-    }
-    public void setGPA(double gpa)
-    {
-        this.gpa=gpa;
-    }
-    public String getName()
-    {
-        return name;
-    }
-    public int getAge()
-    {
-        return age;
-    }
-    public double getGPA()
-    {
-        return gpa;
-    }
-}
